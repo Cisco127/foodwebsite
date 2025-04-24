@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-poppins text-gray-800 bg-secondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-playfair;
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.btn {
+  @apply px-6 py-2 font-medium transition-all duration-300 rounded-md;
+}
+
+.btn-primary {
+  @apply text-white bg-primary hover:bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply text-primary bg-white border border-primary hover:bg-secondary;
+}
+
+.card {
+  @apply overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg;
+}
+
+.nav-link {
+  @apply relative px-3 py-2 font-medium transition-all duration-300 hover:text-primary;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.nav-link.active {
+  @apply text-primary;
+}
+
+.nav-link.active::after {
+  @apply w-full;
+}
+
+.section {
+  @apply py-16;
+}
+
+.section-title {
+  @apply mb-12 text-4xl font-bold text-center text-primary;
+}
+
+.food-card {
+  @apply flex flex-col h-full overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-xl;
+}
+
+.food-card-img {
+  @apply object-cover w-full h-48;
+}
+
+.food-card-body {
+  @apply flex flex-col flex-1 p-4;
+}
+
+.food-card-title {
+  @apply mb-2 text-xl font-semibold;
+}
+
+.food-card-price {
+  @apply mb-4 text-lg font-bold text-primary;
+}
+
+.food-card-actions {
+  @apply flex items-center justify-between mt-auto;
+}
+
+.quantity-control {
+  @apply flex items-center;
+}
+
+.quantity-btn {
+  @apply flex items-center justify-center w-8 h-8 text-white transition-all duration-300 rounded-full bg-primary hover:bg-primary-dark;
+}
+
+.quantity-input {
+  @apply w-12 mx-2 text-center border border-gray-300 rounded;
+}
+
+.cart-item {
+  @apply flex items-center p-4 mb-4 bg-white rounded-lg shadow;
+}
+
+.cart-item-img {
+  @apply object-cover w-20 h-20 mr-4 rounded;
+}
+
+.cart-item-details {
+  @apply flex-1;
+}
+
+.cart-item-title {
+  @apply text-lg font-semibold;
+}
+
+.cart-item-price {
+  @apply text-primary;
+}
+
+.cart-item-actions {
+  @apply flex items-center;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block mb-2 font-medium text-gray-700;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+}
+
+.form-error {
+  @apply mt-1 text-sm text-red-500;
+}
